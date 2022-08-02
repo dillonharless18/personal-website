@@ -43,6 +43,7 @@ const Home = () => {
                     />
                 </h1>
                 <h2>Fullstack Developer / AWS Solutions Architect / AWS Certified Developer</h2>
+                <h2>* This site is currently undergoing construction for responsiveness *</h2>
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>
 
             </div>
