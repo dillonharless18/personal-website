@@ -15,10 +15,7 @@
       height: auto;
       bottom: 0;
       transform: rotateZ(30deg) !important;
-
-      @media screen and (max-width: 1000px) {
-        transform: translateY(-100%) rotateZ(30deg) !important;
-      }
+      transform: translateY(-101%) rotateZ(30deg) !important;
     }
   
     .solid-logo {
