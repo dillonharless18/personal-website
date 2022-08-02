@@ -30,7 +30,7 @@ const Contact = () => {
         .then(
             () => {
                 alert('Message sent succesfully')
-                window.location.replace('dillonharless.com')
+                window.location.replace('')
             },
             () => {
                 alert('Failed to send the message')
