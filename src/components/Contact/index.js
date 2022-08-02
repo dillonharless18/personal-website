@@ -5,6 +5,13 @@ import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height
+    };
+}
 
 const Contact = () => {
 
@@ -76,13 +83,16 @@ const Contact = () => {
                     </form>
                 </div>
             </div>
-            <div className='info-map'>
-                Dillon Harless
-                <br />
-                Wilmington, NC
-                <br />
-                <span>developer.dillonharless@gmail.com</span>
-            </div>
+            {
+                getWindowDimensions().width > 1000 &&
+                <div className='info-map'>
+                    Dillon Harless
+                    <br />
+                    Wilmington, NC
+                    <br />
+                    <span>developer.dillonharless@gmail.com</span>
+                </div>
+            }
             <div className='map-wrap'>
                 <MapContainer center={[34.2105430095953, -77.88820616863114]} zoom={13}>
                     <TileLayer url={"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"} />
