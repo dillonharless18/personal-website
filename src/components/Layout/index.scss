@@ -36,11 +36,31 @@
     transform-style: preserve-3d;
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
+
+    @media screen and (max-width: 1000px) {
+      overflow: scroll;
+    }
   }
   
   .container.contact-page,
   .container.about-page,
   .container.portfolio-page {
+
+      
+
+      @media screen and (max-width: 1000px) {
+        display: grid;
+        width: 90%;
+        right: 0;
+        padding: 2em;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        overflow-y: scroll;
+        justify-items: center;
+        padding: 1em;
+        grid-row-gap: 3em;
+        padding-bottom: 5em;
+      }
     
       h1 {
         font-size: 53px;
@@ -48,20 +68,22 @@
         color: #ffd700;
         font-weight: 400;
         margin-top: 0;
-        position: relative;
+        // position: relative;
         margin-bottom: 40px;
-        left: -10px;
+        // left: -10px;
   
         &:before {
           content: '<h1>';
           font-family: 'La Belle Aurore', cursive;
           color: #ffd700;
           font-size: 18px;
-          position: absolute;
-          margin-top: -10px;
-          left: -10px;
+          // position: absolute;
+          // margin-top: -10px;
+          // left: -10px;
           opacity: 0.6;
           line-height: 18px;
+          
+          margin: 0 1em;
         }
   
         &:after {
@@ -70,11 +92,13 @@
           color: #ffd700;
           font-size: 18px;
           line-height: 18px;
-          position: absolute;
-          left: -30px;
-          bottom: -20px;
-          margin-left: 20px;
+          // position: absolute;
+          // left: -30px;
+          // bottom: -20px;
+          // margin-left: 20px;
           opacity: 0.6;
+
+          margin: 0 1em;
         }
       }
   
@@ -105,6 +129,12 @@
       vertical-align: middle;
       display: table-cell;
       max-height: 90%;
+
+      @media screen and (max-width: 1000px) {
+        transform: none;
+        position: unset;
+        width: 80%;
+      }
     }
   
     .text-animate-hover {
@@ -113,3 +143,9 @@
       }
     }
   }
+
+.container.about-page {
+  @media screen and (max-width: 1000px) {
+    grid-template-rows: auto 1fr;
+  }
+}

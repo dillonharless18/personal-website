@@ -1,5 +1,17 @@
 .home-page {
 
+    @media screen and (max-width: 1000px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        grid-row-gap: 5em;
+        justify-items: center;
+        width: 90%;
+        right: 0;
+        top: 10%;
+    }
+
+
     .text-zone {
         position: absolute;
         left: 10%;
@@ -7,6 +19,16 @@
         transform: translateY(-50%);
         width: 40%;
         max-height: 90%;
+
+        @media screen and (max-width: 1000px) {
+            width: 60%;
+            justify-items: center;
+            align-items: center;
+            position: unset;
+            transform: none;
+        }
+
+            
     }
 
     h1 {
@@ -16,6 +38,10 @@
         font-family: 'Coolvetica';
         font-weight: 400;
 
+        @media screen and (max-width: 1000px) {
+            font-size: 3em;
+        }
+
         &::before {
             content: '<h1>';
             font-family: 'La Belle Aurore';
@@ -23,7 +49,7 @@
             font-size: 18px;
             position: absolute;
             margin-top: -40px;
-            left: 15px;
+            // left: 15px;
             opacity: 0.6;
         }
 

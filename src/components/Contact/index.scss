@@ -79,6 +79,11 @@
     width: 53%;
     height: 115%;
     margin-top: -3%;
+
+    @media screen and (max-width: 1000px) {
+      width: 80%;
+      height: 80%;
+    }
   }
   
   .leaflet-container {
@@ -105,6 +110,10 @@
     opacity: 0;
     animation: fadeIn 1s 1.5s;
     animation-fill-mode: forwards;
+
+    @media screen and (max-width: 1000px) {
+      visibility: hidden;
+    }
   
     span {
       font-size: 16px;
