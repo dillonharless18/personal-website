@@ -92,6 +92,12 @@
         }
     }
 
+    a.the-lab-link {
+        &:after {
+            content: 'LAB';
+        }
+    }
+
     a.active {
         svg {
             color: #ffd700;

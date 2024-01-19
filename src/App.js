@@ -4,6 +4,7 @@ import Layout from './components/Layout/index.js';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
+import TheLab from './components/TheLab'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="the-lab" element={<TheLab />} />
       </Route>
     </Routes>
     </>
