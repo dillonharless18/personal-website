@@ -5,7 +5,7 @@ import DrawSVGPlugin from 'gsap/DrawSVGPlugin';
 // import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin.js';
 import './index.scss';
 import LogoD from '../../../assets/images/LetterD.png'
-import {useEffect, useRef} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 const Logo = () => {
 
@@ -16,31 +16,32 @@ const Logo = () => {
 
 
     useEffect(() => {
-        // setTimeout(2000)
         gsap.registerPlugin(DrawSVGPlugin)
 
-        // gsap
-        //     .timeline()
         tl.current
-            .to(bgRef.current, {
-                duration: 1,
-                opacity: 1
-            })
-            .from(outlineLogoRef.current, {
-                drawSVG: 0,
-                duration: 6
-            })
+        .to(bgRef.current, {
+            duration: 1,
+            opacity: 1
+        })
+        .fromTo(outlineLogoRef.current, {
+            drawSVG: 0
+        }, {
+            drawSVG: "69%", // Ensure the drawSVG animation completes
+            duration: 4.5,
+            onComplete: () => {
+                gsap.to(outlineLogoRef.current, { opacity: 0, duration: 2 });
+            }
+        });
             
         gsap.fromTo(
             solidLogoRef.current,
-            // outlineLogoRef.current,
             {
                 opacity: 0,
             },
             {
                 opacity: 1,
-                delay: 2,
-                duration: 2.5,
+                delay: 5,
+                duration: 5,
             }
         )
         }, [])
@@ -66,7 +67,6 @@ const Logo = () => {
             >
                 <g 
                     className='svg-container'
-                    // transform='translate(0 450) scale (.1, -.1)'
                     fill='none'
                 >
                     <path
@@ -89,3 +89,5 @@ const Logo = () => {
 }
 
 export default Logo
+
+
