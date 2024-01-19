@@ -30,6 +30,10 @@ const TheLab = () => {
                     <p>
                         Weclome to my secret lab. Here you can find all my projects!
                     </p>
+                    <a href="/the-lab/chainlist" className="cool-link-box">Chainlist ( like Craigslist but on Arbitrum! )</a>
+                    <a href="/the-lab/css-grid" className="cool-link-box">Fun with CSS Grid</a>
+                    <a href="/the-lab/django-app" className="cool-link-box">Django App</a>
+                    <a href="/the-lab/chatgpt-plugin" className="cool-link-box">ChatGPT Plugin</a>
                 </div>
 
                 <div className='stage-vial-cont'>
@@ -48,6 +52,7 @@ const TheLab = () => {
                 </div>
             </div>
             <Loader type="pacman" />
+
         </>
     )
     

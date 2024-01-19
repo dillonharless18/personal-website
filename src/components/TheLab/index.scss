@@ -9,6 +9,7 @@
     overflow: hidden;
 
     @media screen and (max-width: 1000px) {
+      visibility: hidden;
       position: unset;
       padding-left: 18%;
       padding-right: 18%;
@@ -204,3 +205,25 @@
         opacity: 0;
     }
 }
+
+
+.cool-link-box {
+    display: inline-block;
+    margin: 20px 20px 20px 0; // or any space you want from the text above
+    padding: 10px 20px;
+    background-color: #ff4c60; // a cool red color, for example
+    color: white; // text color
+    text-transform: uppercase; // stylistic choice for uppercase text
+    text-decoration: none; // removes underline from the link
+    font-weight: bold;
+    border-radius: 8px; // rounded corners
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // subtle shadow
+    transition: background-color 0.3s, transform 0.3s; // smooth transition for hover effect
+  
+    &:hover {
+      background-color: darken(#ff4c60, 10%); // darkens the color on hover
+      transform: translateY(-5px); // slight raise effect on hover
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); // larger shadow on hover
+    }
+  }
+  
